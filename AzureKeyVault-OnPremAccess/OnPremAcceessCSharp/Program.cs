@@ -8,7 +8,7 @@ namespace OnPremAcceessCSharp
 {
     class Program
     {    
-        //https://stackoverflow.com/questions/49904715/use-azure-vault-secret-from-onpremise-web-application
+
         //https://docs.microsoft.com/en-us/azure/key-vault/general/tutorial-net-create-vault-azure-web-app
         static async Task Main(string[] args)
         {
