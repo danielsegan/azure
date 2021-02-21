@@ -36,24 +36,24 @@ def renderMap(lat,long):
 def main(req: func.HttpRequest) -> func.HttpResponse:
     
     logging.info('Python HTTP trigger function processed a request.')
-    name = req.params.get('address')
+    address = req.params.get('address')
     
-    if not name:
+    if not address:
         try:
             req_body = req.get_json()
         except ValueError:
             pass
         else:
-            name = req_body.get('address')
+            address = req_body.get('address')
 
-    if name: 
-        coords = resolveAddress(name)
+    if address: 
+        coords = resolveAddress(address)
         data = renderMap(coords[0],coords[1])
 
         blob_client = BlobClient.from_connection_string(conn_string, container_name=container_name, blob_name=f'{uuid.uuid4()}.png')
         blob_client.upload_blob(data)
         
-        return func.HttpResponse(f"Map created for: {name}.", status_code=200)
+        return func.HttpResponse(f"Map created for: {address}.", status_code=200)
     else: 
         return func.HttpResponse("Bad address input", status_code=400)
    
