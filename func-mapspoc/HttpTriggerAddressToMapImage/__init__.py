@@ -8,7 +8,7 @@ import urllib.parse
 import os
 
 subscriptionKey = os.environ["AzureMapsSubscriptionKey"] 
-client_id =  os.environ["AzureMapsClientId"] 
+client_id =  os.environ["AzureMapsSubscriptionKey"] 
 conn_string = os.environ["StorageConnectionString"]  
 
 container_name = "output"
