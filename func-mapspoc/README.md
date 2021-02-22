@@ -19,10 +19,9 @@ This Function example does the following:
 - Azure Storage account 
 
 **App Settings**
-AzureMapsSubscriptionKey - Subscription key for Azure Maps account
-AzureMapsSubscriptionKey - Client ID for Azure Maps account 
-StorageConnectionString - Azure Storage connection string
-ContainerName - name for blob container for output
+- AzureMapsSubscriptionKey - Subscription key for Azure Maps account
+- AzureMapsSubscriptionKey - Client ID for Azure Maps account 
+- StorageConnectionString - Azure Storage connection string
 
 **Documentation Resources** 
 - [Quickstart: Create a function in Azure with Python using Visual Studio Code](https://docs.microsoft.com/en-us/azure/azure-functions/create-first-function-vs-code-python)
